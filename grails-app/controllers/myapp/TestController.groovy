@@ -4,14 +4,14 @@ import grails.gorm.transactions.Transactional
 import grails.plugin.springsecurity.annotation.Secured
 
 @Secured(['ROLE_ADMIN', 'ROLE_USER'])
-@Transactional
+@Transactional("dataSource2")
 class TestController {
 
     def index() {
 
         def authorCriteria = Author.createCriteria()
 
-        List<Author> authors = authorCriteria.list(max: 5) {}
+        List<Author> authors = authorCriteria.list(max: 3) {}
 
         /*authors.each { author ->
             author.books.each { book ->

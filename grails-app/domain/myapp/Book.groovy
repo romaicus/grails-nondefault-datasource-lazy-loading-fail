@@ -8,8 +8,13 @@ class Book {
 
     Author author
 
-    /*static mapping = {
+    static mapping = {
         datasource "dataSource2"
-    }*/
+    }
+
+    Book withAuthor(Author author) {
+        this.author = author
+        return this
+    }
 
 }

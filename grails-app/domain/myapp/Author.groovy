@@ -6,8 +6,8 @@ class Author {
 
     String name
 
-    /*static mapping = {
+    static mapping = {
         datasource "dataSource2"
-    }*/
+    }
 
 }
