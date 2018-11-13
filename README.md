@@ -25,7 +25,7 @@ it seems like lazy loading does not work with non-default data sources.
 ## Steps to Reproduce
 1. To reproduce simple uncomment "static mapping" in "Author" and "Book" entities
 2. this will map both the entities to non-default data source that is "dataSource2"
-3. Run application and execute "TestController" where list of "Author" entity is queried and passed to the corresponding gsp that "Views/test/index.gsp"
+3. Run application using grails run-app or ./grailsw run-app (grant execute permission to grailsw), use admin/admin as loing credentials and execute "TestController" where list of "Author" entity is queried and passed to the corresponding gsp that "Views/test/index.gsp"
 3. when index.gsp iterates over the list of "Author" and associated list of "Book" it throws "PooledConnection has already been closed"
 
 Note: 
