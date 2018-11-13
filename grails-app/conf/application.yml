@@ -82,8 +82,9 @@ grails:
                 taglib: none
                 staticparts: none
     transaction:
-        chainedTransactionManagerPostProcessor:
+        chainedTransactionManager:
             enabled: true
+            blacklistPattern: '.*'
 endpoints:
     jmx:
         unique-names: true
